@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "./index.html" ?>
+<p class="bg-emerald-800 text-white">banaan</p>
+<p class="bg-red-700 text-white">banaan</p>
+<p class="bg-emerald-800 text-white">banaan</p>
+<p class="bg-yellow-300 text-white">banaan</p>
 </body>
 </html>
