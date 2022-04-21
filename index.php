@@ -14,7 +14,7 @@
     <p class="bg-red-700 text-white">banaan</p>
     <p class="bg-emerald-800 text-white">banaan</p>
     <p class="bg-yellow-300 text-white">banaan</p>
-    <p class="bg-cyan-400 hover:bg-cyan-500 text-white flex">banaan</p>
+    <p class="bg-cyan-400 hover:bg-cyan-500 dark:text-white light:text-black lg:text-4xl md:text-xl">banaan</p>
 </body>
 
 </html>
