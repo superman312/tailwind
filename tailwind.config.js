@@ -1,7 +1,8 @@
 module.exports = {
   content: [
-    './pages/**/*.{html,js,php}',
-    './components/**/*.{html,js.php}',
+    './pages/**/*.{js,php}',
+    './php/**/*.{js,php}',
+    './js/**/*.{js,php}',
     './index.php',
   ],
   theme: {
