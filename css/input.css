@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    .dropbtn {
+        @apply bg-green-500 text-white p-4 text-base border-none cursor-default;
+    }
+    .dropdown {
+        @apply relative inline-block;
+    }
+    .dropdown-content {
+        @apply hidden absolute bg-white min-w-[160px] shadow-[0_8px_16px_0_rgba(0,0,0,0.2)] z-10;
+    }
+    .dropdown-content a {
+        @apply text-black py-3 px-4 block;
+    }
+    .dropdown-content a:hover {
+        @apply bg-blue-300;
+    }
+    .dropdown:hover .dropdown-content {
+        @apply block;
+    }
+    .dropdown:hover .dropbtn {
+        @apply bg-green-600;
+    }
+}

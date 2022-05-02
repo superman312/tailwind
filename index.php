@@ -1,3 +1,7 @@
+<?php
+$page = 'index';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,16 +9,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/output.css">
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 
-<body>
-    <p class="bg-emerald-800 text-white">banaan</p>
-    <p class="bg-red-700 text-white">banaan</p>
-    <p class="bg-emerald-800 text-white">banaan</p>
-    <p class="bg-yellow-300 text-white">banaan</p>
-    <p class="bg-cyan-400 hover:bg-cyan-500 dark:text-white light:text-black lg:text-4xl md:text-xl">banaan</p>
+<body class=" bg-gray-300 dark:bg-gray-800">
+    <?php include $_SERVER["DOCUMENT_ROOT"] . "/tailwind/php/header.php" ?>
 </body>
 
 </html>
