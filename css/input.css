@@ -5,13 +5,13 @@
 @layer components {
 
     .dropbtn {
-        @apply bg-green-500 text-white p-4 text-base border-none cursor-default;
+        @apply lg:bg-green-500 bg-red-600 text-white p-4 text-base border-none cursor-default min-w-[100vw] text-right;
     }
     .dropdown {
-        @apply relative inline-block;
+        @apply fixed lg:hidden sm:inline-block right-0;
     }
     .dropdown-content {
-        @apply hidden absolute bg-white min-w-[160px] shadow-[0_8px_16px_0_rgba(0,0,0,0.2)] z-10;
+        @apply hidden absolute bg-white min-w-[100vw] shadow-[0_8px_16px_0_rgba(0,0,0,0.2)] z-10 right-0 text-center;
     }
     .dropdown-content a {
         @apply text-black py-3 px-4 block;
