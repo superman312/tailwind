@@ -468,36 +468,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.dropbtn {
-  min-width: 100vw;
-  cursor: default;
-  border-style: none;
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-  padding: 1rem;
-  text-align: right;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .dropbtn {
-    --tw-bg-opacity: 1;
-    background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-  }
-}
-
 .dropdown {
-  position: fixed;
-  right: 0px;
-}
-
-@media (min-width: 640px) {
-  .dropdown {
-    display: inline-block;
-  }
+  position: relative;
+  height: 10vh;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -506,46 +480,56 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.dropdown-content {
+.dropdown button, .dropdown a {
   position: absolute;
+  top: 0px;
   right: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown button {
   z-index: 10;
-  display: none;
-  min-width: 100vw;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.dropdown a {
+  visibility: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
   text-align: center;
-  --tw-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  --tw-shadow-colored: 0 8px 16px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
-.dropdown-content a {
-  display: block;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+.dropdown:hover a {
+  visibility: visible;
 }
 
-.dropdown-content a:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+.dropdown:hover a:hover {
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown:hover a#dd1 {
+  top: 100%;
 }
 
-.dropdown:hover .dropbtn {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+.dropdown:hover a#dd2 {
+  top: 200%;
 }
 
-.hidden {
-  display: none;
+.dropdown:hover a#dd3 {
+  top: 300%;
+}
+
+.dropped:hover {
+  background-color: thistle;
 }
 
 .bg-gray-300 {
@@ -557,19 +541,5 @@ Ensure the default browser behavior of the `hidden` attribute.
   .dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:fixed {
-    position: fixed;
-  }
-
-  .lg\:right-0 {
-    right: 0px;
-  }
-
-  .lg\:block {
-    display: block;
   }
 }

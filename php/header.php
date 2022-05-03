@@ -1,15 +1,8 @@
 <nav>
     <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-    </div>
-    <div class="lg:fixed lg:right-0 lg:block hidden">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+        <button>Dropdown</button>
+        <a id="dd1" class="dropped" href="#">Link 1</a>
+        <a id="dd2" class="dropped" href="#">Link 2</a>
+        <a id="dd3" class="dropped" href="#">Link 3</a>
     </div>
 </nav>

@@ -4,25 +4,34 @@
 
 @layer components {
 
-    .dropbtn {
-        @apply lg:bg-green-500 bg-red-600 text-white p-4 text-base border-none cursor-default min-w-[100vw] text-right;
-    }
     .dropdown {
-        @apply fixed lg:hidden sm:inline-block right-0;
+        @apply w-full h-[10vh] relative lg:hidden
     }
-    .dropdown-content {
-        @apply hidden absolute bg-white min-w-[100vw] shadow-[0_8px_16px_0_rgba(0,0,0,0.2)] z-10 right-0 text-center;
+    .dropdown button, .dropdown a {
+        @apply absolute w-full h-full top-0 right-0
     }
-    .dropdown-content a {
-        @apply text-black py-3 px-4 block;
+    .dropdown button {
+        @apply bg-orange-500 z-10
     }
-    .dropdown-content a:hover {
-        @apply bg-blue-300;
+    .dropdown a {
+        @apply bg-teal-600 invisible text-center transition-all duration-200 ease-linear
     }
-    .dropdown:hover .dropdown-content {
-        @apply block;
+    .dropdown:hover a {
+        @apply visible
     }
-    .dropdown:hover .dropbtn {
-        @apply bg-green-600;
+    .dropdown:hover a:hover {
+        @apply transition-[background-color] ease-linear duration-200
+    }
+    .dropdown:hover a#dd1 {
+        top: 100%;
+    }
+    .dropdown:hover a#dd2 {
+        top: 200%;
+    }
+    .dropdown:hover a#dd3 {
+        top: 300%;
+    }
+    .dropped:hover {
+        background-color: thistle;
     }
 }
