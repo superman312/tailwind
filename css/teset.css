@@ -1,0 +1,147 @@
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ICON SIZES */
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* ICON SIZES END */
+
+:root {
+  --bg-color: rgb(16, 0, 72);
+  --text-color: aqua;
+  --hili-1: rgb(149, 191, 11);
+  --hili-1-dark: rgb(99, 128, 11);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--bg-color);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: var(--text-color);
+}
+
+/* Nav Bar Start*/
+
+.headernavigation {
+  height: 80px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--hili-1);
+  border-bottom: 10px solid var(--hili-1-dark);
+  transition: height 0.25s ease-in-out;
+  position: relative;
+}
+
+.headernavigation-open {
+  height: 275px;
+  transition: height 0.25s ease-in-out;
+}
+
+#btnContainer {
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.LOGO_li {
+  width: 100%;
+  background-color: darkgreen;
+  align-self: flex-start;
+  height: 70px;
+}
+
+.LOGO {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#btnContainer li {
+  padding: 10px 20px;
+}
+
+#btnContainer li > a,
+.dropbtn {
+  display: inline-block;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+#expand-menu {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#expand-menu > span {
+  content: "wwww";
+}

@@ -3,35 +3,71 @@
 @tailwind utilities;
 
 @layer components {
+  body {
+    @apply m-0 min-h-full bg-blue-900;
+  }
+  * {
+    @apply box-border;
+  }
 
-    .dropdown {
-        @apply w-full h-[10vh] relative lg:hidden
-    }
-    .dropdown button, .dropdown a {
-        @apply absolute w-full h-full top-0 right-0
-    }
-    .dropdown button {
-        @apply bg-orange-500 z-10
-    }
-    .dropdown a {
-        @apply bg-teal-600 invisible text-center transition-all duration-200 ease-linear
-    }
-    .dropdown:hover a {
-        @apply visible
-    }
-    .dropdown:hover a:hover {
-        @apply transition-[background-color] ease-linear duration-200
-    }
-    .dropdown:hover a#dd1 {
-        top: 100%;
-    }
-    .dropdown:hover a#dd2 {
-        top: 200%;
-    }
-    .dropdown:hover a#dd3 {
-        top: 300%;
-    }
-    .dropped:hover {
-        background-color: thistle;
-    }
+  .line {
+    @apply fill-[none] stroke-white stroke-[6];
+    transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .headernavigation {
+    @apply h-[80px] bg-lime-500 border-b-[10px] border-gray-700 transition-[height] duration-[250ms] ease-in-out relative;
+  }
+  .headernavigation-open {
+    @apply h-[275px] transition-[height] duration-[250ms] ease-in-out;
+  }
+  #btnContainer {
+    @apply h-full list-none m-0 p-0 overflow-hidden flex items-center flex-col;
+  }
+  .LOGO_li {
+    @apply w-full bg-green-900 self-start h-[70px];
+  }
+  .LOGO {
+    @apply max-h-[50px] max-w-[50px];
+  }
+  #btnContainer li {
+    @apply px-[20px] py-[10px];
+  }
+  #btnContainer li > a,
+  .dropbtn {
+    @apply inline-block text-black text-xl text-center no-underline relative;
+  }
+  #expand-menu {
+    @apply block absolute right-5 top-[15px] m-0 p-0;
+  }
+  #expand-menu > span {
+    @apply content-[www];
+  }
 }
