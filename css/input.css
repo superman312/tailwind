@@ -4,14 +4,14 @@
 
 @layer components {
   body {
-    @apply m-0 min-h-full bg-blue-900;
+    @apply m-0 min-h-full dark:bg-blue-900 bg-blue-400;
   }
   * {
     @apply box-border;
   }
 
   .line {
-    @apply fill-[none] stroke-white stroke-[6];
+    @apply fill-[none] stroke-white stroke-[6] lg:invisible visible;
     transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -43,26 +43,26 @@
     stroke-width: 6;
   }
   .headernavigation {
-    @apply h-[80px] bg-lime-500 border-b-[10px] border-gray-700 transition-[height] duration-[250ms] ease-in-out relative;
+    @apply h-[80px] bg-lime-500 lg:bg-green-900 border-b-[10px] border-gray-700 transition-[height] duration-[250ms] ease-in-out absolute z-10 w-full;
   }
   .headernavigation-open {
-    @apply h-[275px] transition-[height] duration-[250ms] ease-in-out;
+    @apply h-[325px] transition-[height] duration-[250ms] ease-in-out;
   }
   #btnContainer {
-    @apply h-full list-none m-0 p-0 overflow-hidden flex items-center flex-col;
+    @apply h-full list-none m-0 p-0 overflow-hidden flex items-center flex-col lg:flex-row whitespace-nowrap;
   }
   .LOGO_li {
     @apply w-full bg-green-900 self-start h-[70px];
   }
   .LOGO {
-    @apply max-h-[50px] max-w-[50px];
+    @apply max-h-[50px] max-w-[50px] select-none;
   }
   #btnContainer li {
     @apply px-[20px] py-[10px];
   }
   #btnContainer li > a,
   .dropbtn {
-    @apply inline-block text-black text-xl text-center no-underline relative;
+    @apply inline-block text-black lg:text-white text-xl text-center no-underline relative;
   }
   #expand-menu {
     @apply block absolute right-5 top-[15px] m-0 p-0;

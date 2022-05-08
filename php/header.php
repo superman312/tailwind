@@ -8,10 +8,12 @@
     </ul>
     <ul id='btnContainer'>
         <li class='LOGO_li'>
-            <a href='/apo_ahmad'><img src='./img/logo.png' alt='LOGO' class='LOGO'></a>
+            <a href='/tailwind'><img src='/tailwind/img/logo.png' alt='LOGO' class='LOGO'></a>
         </li>
         <li><a class='btn' href='/index'>Home</a></li>
-        <li><a class='btn' href='/booking'>boeking</a></li>
-        <li><a class='btn' href='/placeholder'>placeholder</a></li>
-        <li><a class='btn' href='/placeholder'>placeholder</a></li>
+        <li><a class='btn' href='/tailwind/pages/cv'>CV</a></li>
+        <li><a class='btn' href='/tailwind/pages/projects'>Projects</a></li>
+        <li><a class='btn' href='/tailwind/pages/overmij'>Over Mij</a></li>
+        <li><a class='btn' href='/tailwind/#'>Placeholder</a></li>
     </ul>
+</nav>

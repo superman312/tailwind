@@ -88,7 +88,8 @@ body {
   background-color: var(--hili-1);
   border-bottom: 10px solid var(--hili-1-dark);
   transition: height 0.25s ease-in-out;
-  position: relative;
+  position: absolute;
+  width: 100%;
 }
 
 .headernavigation-open {
