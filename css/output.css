@@ -546,7 +546,7 @@ body {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
   transition-property: height;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -559,11 +559,13 @@ body {
   }
 }
 
-.headernavigation-open {
-  height: 325px;
-  transition-property: height;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@media (max-width: 1024px) {
+  .headernavigation-open {
+    height: 325px;
+    transition-property: height;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 #btnContainer {
@@ -615,16 +617,18 @@ body {
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-@media (min-width: 1024px) {
-  #btnContainer li > a, .dropbtn {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
+#btnContainer li > a:hover, .dropbtn:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 #expand-menu {
@@ -641,19 +645,6 @@ body {
   content: var(--tw-content);
 }
 
-.relative {
-  position: relative;
-}
-
-.top-60 {
-  top: 15rem;
-}
-
-.w-2 {
-  width: 0.5rem;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.resize {
+  resize: both;
 }

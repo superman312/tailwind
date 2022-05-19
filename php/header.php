@@ -10,7 +10,7 @@
         <li class='LOGO_li'>
             <a href='/tailwind'><img src='/tailwind/img/logo.png' alt='LOGO' class='LOGO'></a>
         </li>
-        <li><a class='btn' href='/index'>Home</a></li>
+        <li><a class='btn' href='/tailwind/index'>Home</a></li>
         <li><a class='btn' href='/tailwind/pages/cv'>CV</a></li>
         <li><a class='btn' href='/tailwind/pages/projects'>Projects</a></li>
         <li><a class='btn' href='/tailwind/pages/overmij'>Over Mij</a></li>

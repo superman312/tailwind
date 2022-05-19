@@ -43,10 +43,12 @@
     stroke-width: 6;
   }
   .headernavigation {
-    @apply h-[80px] bg-lime-500 lg:bg-green-900 border-b-[10px] border-gray-700 transition-[height] duration-[250ms] ease-in-out absolute z-10 w-full;
+    @apply h-[80px] bg-green-700 lg:bg-green-900 border-b-[10px] border-gray-700 transition-[height] duration-[250ms] ease-in-out absolute z-10 w-full;
   }
-  .headernavigation-open {
+  @media (max-width: 1024px) {
+    .headernavigation-open {
     @apply h-[325px] transition-[height] duration-[250ms] ease-in-out;
+    }
   }
   #btnContainer {
     @apply h-full list-none m-0 p-0 overflow-hidden flex items-center flex-col lg:flex-row whitespace-nowrap;
@@ -62,7 +64,7 @@
   }
   #btnContainer li > a,
   .dropbtn {
-    @apply inline-block text-black lg:text-white text-xl text-center no-underline relative;
+    @apply inline-block text-white text-xl text-center no-underline relative transition-[color] ease-in hover:text-red-500;
   }
   #expand-menu {
     @apply block absolute right-5 top-[15px] m-0 p-0;
